@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhaskara</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .bhaskara{
+            position: absolute;
+            background-color: rgb(15, 15, 15);
+            text-align: center;
+            text-align: center;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-45%);
+            border-radius: 15px;
+            padding: 15px;
+            color: aliceblue; 
+        }
+    </style>
+</head>
+<body>
+    <h1>bhaskara</h1>
+</body>
+<form>
+    <div. class="bhaskara">
+    <br><input type="number" class="i1" id="a" value> digite o valor de a </input> </br>
+    <br> <input type="number" id="b" value> digite o valor de b </input> </br>
+    <br><input type="number" id="c" value> digite o valor de c </input></br>
+    <p></p>
+    <button type="button" class="b1" onclick="calcularBhaskara()"> calcular</button>
+    </div>
+</form>
+<p id="resultado"></p>
+<script>
+    function calcularBhaskara (){
+        a= document.getElementById('a').value
+        b= document.getElementById('b').value
+        c= document.getElementById('c').value
+        a= Number(a)
+        b= Number(b)
+        c= Number(c)
+        d = Math.pow (b,2) - (4*a*c)
+        if(d>0){
+            x1= (-b - Math.sqrt(d,2))/(2*a)
+            x2= (-b + Math.sqrt(d,2))/(2*a)
+            document.getElementById('resultado').innerHTML = "as raízes são: " +x1 + " e: " +x2
+        } 
+        else if (d==0){
+            x3= (-b)/2*a
+            document.getElementById('resultado').innerHTML = "há duas raízes reais e iguais a:" + x3
+        } 
+        if (d<0) {
+                document.getElementById('resultado').innerHTML = "não há raízes reais."
+            }
+        }
+    
+                    
+</script>
+</html>
